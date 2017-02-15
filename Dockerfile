@@ -16,28 +16,31 @@ ENV TERM xterm
 #-------------------------------------------------------------------------- 
 # Software's Installation 
 #-------------------------------------------------------------------------- 
+# Add the "PHP 7" ppa 
+RUN apt-get install -y software-properties-common && \ 
+	add-apt-repository -y ppa:ondrej/php 
 #install  freetds 
 #RUN apt-get install unixodbc unixodbc-dev freetds-dev freetds-bin tdsodbc
 # 
 # Install "PHP Extentions", "libraries", "Software's" 
 RUN apt-get update && \ 
 	apt-get install -y --force-yes \ 
-	php7.0-cli \ 
-	php7.0-common \ 
-	php7.0-curl \ 
-	php7.0-json \ 
-	php7.0-xml \ 
-	php7.0-mbstring \ 
-	php7.0-mcrypt \ 
-	php7.0-mysql \ 
-	php7.0-pgsql \ 
-	php7.0-sqlite \ 
-	php7.0-sqlite3 \ 
-	php7.0-zip \ 
-	php7.0-bcmath \ 
-	php7.0-memcached \ 
-	php7.0-gd \ 
-	php7.0-sybase \
+	php7.1-cli \ 
+	php7.1-common \ 
+	php7.1-curl \ 
+	php7.1-json \ 
+	php7.1-xml \ 
+	php7.1-mbstring \ 
+	php7.1-mcrypt \ 
+	php7.1-mysql \ 
+	php7.1-pgsql \ 
+	php7.1-sqlite \ 
+	php7.1-sqlite3 \ 
+	php7.1-zip \ 
+	php7.1-bcmath \ 
+	php7.1-memcached \ 
+	php7.1-gd \ 
+	php7.1-sybase \
 	pkg-config \ 
 	php-dev \ 
 	libcurl4-openssl-dev \ 
